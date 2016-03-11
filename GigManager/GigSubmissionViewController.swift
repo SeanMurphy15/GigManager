@@ -21,11 +21,15 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var venueTextField: UITextField!
 
     @IBOutlet weak var compensationTextField: UITextField!
+
     @IBOutlet weak var timeTextField: UITextField!
 
     @IBOutlet weak var dateTextField: UITextField!
+
     @IBOutlet weak var loadInTextField: UITextField!
+
     @IBOutlet weak var setDurationTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -38,13 +42,14 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
     }
 
 
     @IBAction func nextButtonPressed(sender: AnyObject) {
 
         switch (1 > 0) {
+
         case titleTextField.text != "":
             titleTextField.hidden = true
             gigSubmissionDictionary["title"] = titleTextField.text
@@ -119,19 +124,20 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
             datePicker.addTarget(self, action: "datePickerChangedTime:", forControlEvents: .ValueChanged)
             break;
 
-        case setDurationTextField:
-
-            let datePicker:UIDatePicker = UIDatePicker()
-            datePicker.datePickerMode = UIDatePickerMode.CountDownTimer
-            textField.inputView = datePicker
-            datePicker.addTarget(self, action: "datePickerChangedSetDuration:", forControlEvents: .ValueChanged)
-            break;
         case loadInTextField:
 
             let datePicker:UIDatePicker = UIDatePicker()
             datePicker.datePickerMode = UIDatePickerMode.Time
             textField.inputView = datePicker
             datePicker.addTarget(self, action: "datePickerChangedLoadIn:", forControlEvents: .ValueChanged)
+            break;
+
+        case setDurationTextField:
+
+            let datePicker:UIDatePicker = UIDatePicker()
+            datePicker.datePickerMode = UIDatePickerMode.CountDownTimer
+            textField.inputView = datePicker
+            datePicker.addTarget(self, action: "datePickerChangedSetDuration:", forControlEvents: .ValueChanged)
             break;
 
         default:
@@ -159,10 +165,29 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
     }
     func datePickerChangedSetDuration(sender: UIDatePicker){
 
-        let formatter = NSDateFormatter()
-        formatter.timeStyle = .ShortStyle
-        setDurationTextField.text = formatter.stringFromDate(sender.date)
+        let rawTime = sender.countDownDuration
+        let totalMinutes = rawTime / 60
+
+        if totalMinutes >= 60 {
+
+            let hours = Int(totalMinutes / 60)
+            let minutes = Int(totalMinutes % 60)
+
+            setDurationTextField.text = "\(hours) hours and \(minutes) minutes "
+
+        } else if totalMinutes < 60 {
+
+            let minutes = Int(totalMinutes)
+
+            setDurationTextField.text = "\(minutes) minutes"
+        }
+
     }
+    
+}
 
 
-    }
+
+
+
+
