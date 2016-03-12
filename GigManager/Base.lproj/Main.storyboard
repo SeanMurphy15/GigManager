@@ -202,7 +202,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gig Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-D2-4fL">
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gig Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eeS-D2-4fL">
                                 <rect key="frame" x="158" y="171" width="284" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -239,6 +239,65 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PZV-gm-nU3">
+                                <rect key="frame" x="0.0" y="159" width="600" height="350"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0gy-sT-vZH">
+                                    <size key="itemSize" width="338" height="338"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="deL-Aw-w1x" customClass="BandImageCollectionViewCell" customModule="GigManager" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="6" width="338" height="338"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="338" height="338"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="venops-mobile-app-icon-demo" translatesAutoresizingMaskIntoConstraints="NO" id="6OB-K7-DDW">
+                                                    <rect key="frame" x="46" y="45" width="247" height="247"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnZ-2w-jLO">
+                                                    <rect key="frame" x="148" y="8" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJq-bd-e4X">
+                                                    <rect key="frame" x="148" y="295" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="xnZ-2w-jLO" firstAttribute="top" secondItem="deL-Aw-w1x" secondAttribute="topMargin" id="1Dr-BA-Ktm"/>
+                                            <constraint firstItem="xnZ-2w-jLO" firstAttribute="leading" secondItem="YJq-bd-e4X" secondAttribute="leading" id="7BN-7r-Pye"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="6OB-K7-DDW" secondAttribute="trailing" constant="37" id="7CG-77-9XS"/>
+                                            <constraint firstItem="6OB-K7-DDW" firstAttribute="centerY" secondItem="deL-Aw-w1x" secondAttribute="centerY" id="HCr-vs-pS7"/>
+                                            <constraint firstItem="6OB-K7-DDW" firstAttribute="leading" secondItem="deL-Aw-w1x" secondAttribute="leadingMargin" constant="38" id="XsO-Ub-CMh"/>
+                                            <constraint firstItem="YJq-bd-e4X" firstAttribute="centerX" secondItem="6OB-K7-DDW" secondAttribute="centerX" id="eBR-oT-9RK"/>
+                                            <constraint firstItem="YJq-bd-e4X" firstAttribute="top" secondItem="6OB-K7-DDW" secondAttribute="bottom" constant="3" id="gpo-gG-z9q"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="YJq-bd-e4X" secondAttribute="bottom" constant="14" id="l0e-3s-r0O"/>
+                                            <constraint firstItem="6OB-K7-DDW" firstAttribute="top" secondItem="xnZ-2w-jLO" secondAttribute="bottom" constant="16" id="nSY-RI-0cp"/>
+                                            <constraint firstItem="6OB-K7-DDW" firstAttribute="top" secondItem="deL-Aw-w1x" secondAttribute="topMargin" constant="37" id="rAD-1J-N3q"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="bandGenre" destination="YJq-bd-e4X" id="Onf-HE-q4f"/>
+                                            <outlet property="bandImage" destination="6OB-K7-DDW" id="LKl-7N-IZo"/>
+                                            <outlet property="bandName" destination="xnZ-2w-jLO" id="15e-mf-dAv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="8KX-nr-UFH" id="v7d-8g-4G5"/>
+                                    <outlet property="delegate" destination="8KX-nr-UFH" id="Igu-Lg-xfE"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -251,12 +310,15 @@
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="trailing" secondItem="VvT-zA-c4J" secondAttribute="trailing" id="Frn-nO-pib"/>
                             <constraint firstAttribute="bottom" secondItem="Egk-g7-Tgr" secondAttribute="bottom" constant="449" id="GoV-yq-49y"/>
                             <constraint firstItem="VvT-zA-c4J" firstAttribute="leading" secondItem="eeS-D2-4fL" secondAttribute="leading" id="KOg-uA-NaQ"/>
+                            <constraint firstItem="PZV-gm-nU3" firstAttribute="top" secondItem="ghN-wk-dIx" secondAttribute="top" id="N9J-As-Cbn"/>
                             <constraint firstItem="Tai-EB-pGx" firstAttribute="top" secondItem="Xbb-qw-qhJ" secondAttribute="bottom" constant="107" id="OcF-Em-X6F"/>
                             <constraint firstItem="ghN-wk-dIx" firstAttribute="leading" secondItem="B6m-RN-Qz7" secondAttribute="leadingMargin" id="UoJ-4C-odg"/>
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="leading" secondItem="eeS-D2-4fL" secondAttribute="leading" id="Xf9-rU-SOX"/>
+                            <constraint firstItem="PZV-gm-nU3" firstAttribute="centerX" secondItem="CPe-pF-6Yg" secondAttribute="centerX" id="drt-3e-HdP"/>
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="centerX" secondItem="B6m-RN-Qz7" secondAttribute="centerX" id="g6v-1t-ATz"/>
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="baseline" secondItem="VvT-zA-c4J" secondAttribute="baseline" id="ig1-gh-PrH"/>
                             <constraint firstItem="Egk-g7-Tgr" firstAttribute="centerX" secondItem="MdC-tu-cGm" secondAttribute="centerX" id="jti-pB-qKW"/>
+                            <constraint firstItem="xsd-39-zxa" firstAttribute="top" secondItem="PZV-gm-nU3" secondAttribute="bottom" constant="91" id="kVl-47-YL5"/>
                             <constraint firstItem="VvT-zA-c4J" firstAttribute="trailing" secondItem="MdC-tu-cGm" secondAttribute="trailing" id="mRV-Bq-ez1"/>
                             <constraint firstItem="Tai-EB-pGx" firstAttribute="baseline" secondItem="VvT-zA-c4J" secondAttribute="baseline" id="n5l-yD-qZB"/>
                             <constraint firstItem="ghN-wk-dIx" firstAttribute="top" secondItem="Xbb-qw-qhJ" secondAttribute="bottom" constant="95" id="ns1-vZ-6hN"/>
@@ -266,11 +328,13 @@
                             <constraint firstItem="CPe-pF-6Yg" firstAttribute="trailing" secondItem="eeS-D2-4fL" secondAttribute="trailing" id="pN8-B2-9UT"/>
                             <constraint firstItem="CPe-pF-6Yg" firstAttribute="baseline" secondItem="eeS-D2-4fL" secondAttribute="baseline" id="reF-q2-fA1"/>
                             <constraint firstItem="Tai-EB-pGx" firstAttribute="leading" secondItem="VvT-zA-c4J" secondAttribute="leading" id="tEZ-5u-CXh"/>
+                            <constraint firstItem="PZV-gm-nU3" firstAttribute="leading" secondItem="B6m-RN-Qz7" secondAttribute="leading" id="vjY-g7-U3Q"/>
                             <constraint firstItem="CPe-pF-6Yg" firstAttribute="baseline" secondItem="Tai-EB-pGx" secondAttribute="baseline" id="zOr-gx-Bdd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7c5-q9-NBL"/>
                     <connections>
+                        <outlet property="collectionView" destination="PZV-gm-nU3" id="Do7-uk-b1q"/>
                         <outlet property="compensationTextField" destination="Tai-EB-pGx" id="7ib-ff-b4L"/>
                         <outlet property="dateTextField" destination="EwY-NF-Tdc" id="oyo-Gf-GSV"/>
                         <outlet property="detailTextView" destination="ghN-wk-dIx" id="U5c-It-V2h"/>
@@ -383,6 +447,9 @@
             <point key="canvasLocation" x="-698" y="-2323"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="venops-mobile-app-icon-demo" width="1024" height="1024"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="c1b-83-Jpw"/>
         <segue reference="kDS-1f-5zX"/>

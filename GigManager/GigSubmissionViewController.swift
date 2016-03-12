@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
+class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
 
     var gigSubmissionDictionary: [String:AnyObject] = [:]
 
@@ -29,6 +29,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var loadInTextField: UITextField!
 
     @IBOutlet weak var setDurationTextField: UITextField!
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,7 +76,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
             timeTextField.hidden = false
             break
         case timeTextField.text != "":
-            compensationTextField.hidden = true
+            timeTextField.hidden = true
             gigSubmissionDictionary["time"] = timeTextField.text
             timeTextField.text?.removeAll()
             setDurationTextField.hidden = false
@@ -98,6 +99,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
             detailTextView.text?.removeAll()
             print("submission complete")
             break
+            
 
         default:
             break;
@@ -127,7 +129,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
         case loadInTextField:
 
             let datePicker:UIDatePicker = UIDatePicker()
-            datePicker.datePickerMode = UIDatePickerMode.Time
+            datePicker.datePickerMode = UIDatePickerMode.CountDownTimer
             textField.inputView = datePicker
             datePicker.addTarget(self, action: "datePickerChangedLoadIn:", forControlEvents: .ValueChanged)
             break;
@@ -159,9 +161,22 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
     }
     func datePickerChangedLoadIn(sender: UIDatePicker){
 
-        let formatter = NSDateFormatter()
-        formatter.timeStyle = .ShortStyle
-        loadInTextField.text = formatter.stringFromDate(sender.date)
+        let rawTime = sender.countDownDuration
+        let totalMinutes = rawTime / 60
+
+        if totalMinutes >= 60 {
+
+            let hours = Int(totalMinutes / 60)
+            let minutes = Int(totalMinutes % 60)
+
+            loadInTextField.text = "\(hours) hours and \(minutes) minutes before"
+
+        } else if totalMinutes < 60 {
+
+            let minutes = Int(totalMinutes)
+
+            loadInTextField.text = "\(minutes) minutes before"
+        }
     }
     func datePickerChangedSetDuration(sender: UIDatePicker){
 
@@ -183,7 +198,28 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate{
         }
 
     }
-    
+
+    func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
+
+        titleTextField.hidden = false
+        collectionView.hidden = true
+        print("cell selected")
+
+    }
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! BandImageCollectionViewCell
+
+        cell.bandName.text = "The Overeasy"
+        cell.bandGenre.text = "Funk/Rock"
+//        cell?.bandImage.image = // my image here
+
+
+        return cell
+    }
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+        return 3
+    }
 }
 
 

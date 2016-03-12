@@ -23,7 +23,7 @@
 		FF02F5C41C8D119000EC39F0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF02F5C31C8D119000EC39F0 /* CFNetwork.framework */; };
 		FF02F5C61C8D11A800EC39F0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF02F5C51C8D11A800EC39F0 /* Security.framework */; };
 		FF02F5C81C8D11B700EC39F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF02F5C71C8D11B700EC39F0 /* SystemConfiguration.framework */; };
-		FF02F5D21C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D11C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift */; };
+		FF02F5D21C8D329A00EC39F0 /* BandImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D11C8D329A00EC39F0 /* BandImageCollectionViewCell.swift */; };
 		FF02F5D61C8D501700EC39F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D51C8D501700EC39F0 /* SWRevealViewController.m */; };
 		FF02F5D81C8D52ED00EC39F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D71C8D52ED00EC39F0 /* HomeViewController.swift */; };
 		FF02F5DC1C8E03F800EC39F0 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5DB1C8E03F800EC39F0 /* SideMenuTableViewController.swift */; };
@@ -79,7 +79,7 @@
 		FF02F5C31C8D119000EC39F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FF02F5C51C8D11A800EC39F0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FF02F5C71C8D11B700EC39F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FF02F5D11C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberImageCollectionViewCell.swift; path = ../MemberImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF02F5D11C8D329A00EC39F0 /* BandImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BandImageCollectionViewCell.swift; path = ../BandImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF02F5D41C8D501700EC39F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FF02F5D51C8D501700EC39F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FF02F5D71C8D52ED00EC39F0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -207,7 +207,7 @@
 		FF02F5D31C8D32BE00EC39F0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FF02F5D11C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift */,
+				FF02F5D11C8D329A00EC39F0 /* BandImageCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -549,7 +549,7 @@
 				FF801FF31C925696009FDF58 /* GigSubmissionViewController.swift in Sources */,
 				FF02F5E31C8E430900EC39F0 /* Member.swift in Sources */,
 				FF02F5A61C8A660C00EC39F0 /* MapViewController.swift in Sources */,
-				FF02F5D21C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift in Sources */,
+				FF02F5D21C8D329A00EC39F0 /* BandImageCollectionViewCell.swift in Sources */,
 				FF02F5AA1C8A6CE200EC39F0 /* NetworkController.swift in Sources */,
 				FF02F5B21C8AADD300EC39F0 /* GigController.swift in Sources */,
 				FF02F5E11C8E3B2100EC39F0 /* SetlistTableViewController.swift in Sources */,
