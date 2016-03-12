@@ -169,6 +169,7 @@
 		FF02F5B31C8AADDE00EC39F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */,
 				FF02F5BB1C8D0DAB00EC39F0 /* FirebaseController.swift */,
 				FF02F5A91C8A6CE200EC39F0 /* NetworkController.swift */,
 				FF02F5AD1C8A723500EC39F0 /* JSONController.swift */,
@@ -248,7 +249,6 @@
 		FF61F7A01C893AC900F29019 /* GigManager */ = {
 			isa = PBXGroup;
 			children = (
-				FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */,
 				FF61F7AD1C893AC900F29019 /* Info.plist */,
 				FF61F7AA1C893AC900F29019 /* LaunchScreen.storyboard */,
 				FF61F7A51C893AC900F29019 /* Main.storyboard */,

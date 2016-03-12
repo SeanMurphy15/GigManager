@@ -14,7 +14,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
     var gigSubmissionDictionary: [String:AnyObject] = [:]
 
 
-    @IBOutlet weak var googlePlacesButton: UIButton!
+
 
     @IBOutlet weak var detailTextView: UITextView!
 
@@ -35,6 +35,8 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
         dateTextField.delegate = self
         loadInTextField.delegate = self
@@ -61,8 +63,6 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
             venueTextField.hidden = false
             break
         case venueTextField.text != "":
-            googlePlacesButton.hidden = true
-            googlePlacesButton.enabled = false
             venueTextField.hidden = true
             gigSubmissionDictionary["venue"] = venueTextField.text
             venueTextField.text?.removeAll()
@@ -102,7 +102,6 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
             detailTextView.hidden = true
             gigSubmissionDictionary["detail"] = detailTextView.text
             detailTextView.text?.removeAll()
-            print("submission complete")
             break
             
 
@@ -182,7 +181,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
             let hours = Int(totalMinutes / 60)
             let minutes = Int(totalMinutes % 60)
 
-            loadInTextField.text = "\(hours) hours and \(minutes) minutes before"
+            loadInTextField.text = "\(hours) hours and \(minutes) minutes before show"
 
         } else if totalMinutes < 60 {
 
@@ -201,7 +200,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
             let hours = Int(totalMinutes / 60)
             let minutes = Int(totalMinutes % 60)
 
-            setDurationTextField.text = "\(hours) hours and \(minutes) minutes "
+            setDurationTextField.text = "\(hours) hour and \(minutes) minutes"
 
         } else if totalMinutes < 60 {
 
@@ -234,10 +233,6 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
         return 3
     }
 
-    @IBAction func googlePlacesButtonPressed(sender: AnyObject) {
-
-
-    }
 
 }
 
@@ -249,11 +244,15 @@ extension GigSubmissionViewController: GMSAutocompleteViewControllerDelegate {
         venueTextField.text = place.name
         gigSubmissionDictionary["placeID"] = place.placeID
         gigSubmissionDictionary["phoneNumber"] = place.phoneNumber
+        gigSubmissionDictionary["address"] = place.formattedAddress
+        gigSubmissionDictionary["website"] = ConversionController.convertNSURLToString(place.website!)
         gigSubmissionDictionary["longitude"] = ConversionController.convertLongitudeCoordinateToString(place.coordinate)
         gigSubmissionDictionary["latitude"] = ConversionController.convertLatitudeCoordinateToString(place.coordinate)
         self.dismissViewControllerAnimated(true, completion: nil)
 
     }
+
+
 
     func viewController(viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: NSError) {
         // TODO: handle the error.

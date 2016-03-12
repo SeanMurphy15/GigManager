@@ -15,11 +15,18 @@ class GigController{
 var ref = Firebase(url: "https://gigmanager.firebaseio.com/")
 
 
-    static func createGig(title: String?, compensation: String?, setDuration: String?, date: String?,venue: String?, loadIn: String?, details: String?, completion: (success: Bool, error: NSError?, gig: Gig?)->Void){
+    static func createGig(title: String?, placeIdentifier: String?, compensation: String?, detail: String?, longitude: String?, latitude: String?, address: String?, venue: String?, confirmed: String?, date: String?, loadIn: String?, setDuration: String?, bandIdentifier: String?, completion: (success: Bool, error: NSError?)->Void){
 
-        var error = NSError?()
+        let error = NSError?()
 
-        
+        if title == nil || date == nil {
+
+            completion(success: false, error: error)
+
+        } else {
+
+            completion(success: true, error: nil)
+        }
 
     }
 

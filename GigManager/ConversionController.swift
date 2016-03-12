@@ -31,6 +31,16 @@ class ConversionController{
 
             return latitude
         }
+
+        return nil
+    }
+
+    static func convertNSURLToString(url: NSURL) -> String?{
+
+        if let urlString : String = String(format:"%f", url) {
+            
+            return urlString
+        }
         
         return nil
     }

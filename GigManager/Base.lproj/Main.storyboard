@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="8KX-nr-UFH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GVJ-zN-0vt">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -281,13 +281,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egk-g7-Tgr">
-                                <rect key="frame" x="277" y="121" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="nextButtonPressed:" destination="8KX-nr-UFH" eventType="touchUpInside" id="gzY-jI-NR9"/>
-                                </connections>
-                            </button>
                             <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EwY-NF-Tdc">
                                 <rect key="frame" x="158" y="171" width="284" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -298,28 +291,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3rR-Bf-Twh">
-                                <rect key="frame" x="176" y="259" width="248" height="81"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="NH5-C1-SY8"/>
-                                </constraints>
-                                <state key="normal" title="Button" image="google-icon"/>
-                                <connections>
-                                    <action selector="googlePlacesButtonPressed:" destination="8KX-nr-UFH" eventType="touchUpInside" id="iaC-YL-89Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eeS-D2-4fL" firstAttribute="leading" secondItem="MdC-tu-cGm" secondAttribute="leading" id="3wB-gY-d3p"/>
                             <constraint firstItem="xbJ-fy-agH" firstAttribute="trailing" secondItem="Tai-EB-pGx" secondAttribute="trailing" id="9RP-y3-CIy"/>
-                            <constraint firstItem="3rR-Bf-Twh" firstAttribute="centerY" secondItem="B6m-RN-Qz7" secondAttribute="centerY" id="AJX-fX-Qbs"/>
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="centerX" secondItem="ghN-wk-dIx" secondAttribute="centerX" id="CVY-Cl-HLG"/>
                             <constraint firstItem="MdC-tu-cGm" firstAttribute="baseline" secondItem="VvT-zA-c4J" secondAttribute="baseline" id="EvP-J5-0bg"/>
                             <constraint firstItem="eeS-D2-4fL" firstAttribute="trailing" secondItem="Tai-EB-pGx" secondAttribute="trailing" id="FZs-TZ-Q3k"/>
                             <constraint firstItem="VvT-zA-c4J" firstAttribute="trailing" secondItem="eeS-D2-4fL" secondAttribute="trailing" id="FfD-IJ-U3g"/>
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="trailing" secondItem="VvT-zA-c4J" secondAttribute="trailing" id="Frn-nO-pib"/>
-                            <constraint firstAttribute="bottom" secondItem="Egk-g7-Tgr" secondAttribute="bottom" constant="449" id="GoV-yq-49y"/>
                             <constraint firstItem="VvT-zA-c4J" firstAttribute="leading" secondItem="eeS-D2-4fL" secondAttribute="leading" id="KOg-uA-NaQ"/>
                             <constraint firstItem="PZV-gm-nU3" firstAttribute="top" secondItem="ghN-wk-dIx" secondAttribute="top" id="N9J-As-Cbn"/>
                             <constraint firstItem="Tai-EB-pGx" firstAttribute="top" secondItem="Xbb-qw-qhJ" secondAttribute="bottom" constant="107" id="OcF-Em-X6F"/>
@@ -328,8 +309,6 @@
                             <constraint firstItem="PZV-gm-nU3" firstAttribute="centerX" secondItem="CPe-pF-6Yg" secondAttribute="centerX" id="drt-3e-HdP"/>
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="centerX" secondItem="B6m-RN-Qz7" secondAttribute="centerX" id="g6v-1t-ATz"/>
                             <constraint firstItem="EwY-NF-Tdc" firstAttribute="baseline" secondItem="VvT-zA-c4J" secondAttribute="baseline" id="ig1-gh-PrH"/>
-                            <constraint firstItem="Egk-g7-Tgr" firstAttribute="centerX" secondItem="MdC-tu-cGm" secondAttribute="centerX" id="jti-pB-qKW"/>
-                            <constraint firstItem="3rR-Bf-Twh" firstAttribute="centerX" secondItem="EwY-NF-Tdc" secondAttribute="centerX" id="kNo-tT-duD"/>
                             <constraint firstItem="xsd-39-zxa" firstAttribute="top" secondItem="PZV-gm-nU3" secondAttribute="bottom" constant="91" id="kVl-47-YL5"/>
                             <constraint firstItem="VvT-zA-c4J" firstAttribute="trailing" secondItem="MdC-tu-cGm" secondAttribute="trailing" id="mRV-Bq-ez1"/>
                             <constraint firstItem="Tai-EB-pGx" firstAttribute="baseline" secondItem="VvT-zA-c4J" secondAttribute="baseline" id="n5l-yD-qZB"/>
@@ -341,17 +320,21 @@
                             <constraint firstItem="CPe-pF-6Yg" firstAttribute="baseline" secondItem="eeS-D2-4fL" secondAttribute="baseline" id="reF-q2-fA1"/>
                             <constraint firstItem="Tai-EB-pGx" firstAttribute="leading" secondItem="VvT-zA-c4J" secondAttribute="leading" id="tEZ-5u-CXh"/>
                             <constraint firstItem="PZV-gm-nU3" firstAttribute="leading" secondItem="B6m-RN-Qz7" secondAttribute="leading" id="vjY-g7-U3Q"/>
-                            <constraint firstItem="xsd-39-zxa" firstAttribute="top" secondItem="3rR-Bf-Twh" secondAttribute="bottom" constant="260" id="wW0-eg-j8V"/>
                             <constraint firstItem="CPe-pF-6Yg" firstAttribute="baseline" secondItem="Tai-EB-pGx" secondAttribute="baseline" id="zOr-gx-Bdd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="7c5-q9-NBL"/>
+                    <navigationItem key="navigationItem" id="7c5-q9-NBL">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="isk-Y9-zXD">
+                            <connections>
+                                <action selector="nextButtonPressed:" destination="8KX-nr-UFH" id="SZs-28-dYw"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="PZV-gm-nU3" id="Do7-uk-b1q"/>
                         <outlet property="compensationTextField" destination="Tai-EB-pGx" id="7ib-ff-b4L"/>
                         <outlet property="dateTextField" destination="EwY-NF-Tdc" id="oyo-Gf-GSV"/>
                         <outlet property="detailTextView" destination="ghN-wk-dIx" id="U5c-It-V2h"/>
-                        <outlet property="googlePlacesButton" destination="3rR-Bf-Twh" id="ONV-BH-564"/>
                         <outlet property="loadInTextField" destination="xbJ-fy-agH" id="xDV-AT-unU"/>
                         <outlet property="setDurationTextField" destination="CPe-pF-6Yg" id="YRi-Wf-zKJ"/>
                         <outlet property="timeTextField" destination="MdC-tu-cGm" id="QrW-Ob-8mD"/>
@@ -462,11 +445,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="google-icon" width="1800" height="610"/>
         <image name="venops-mobile-app-icon-demo" width="1024" height="1024"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="c1b-83-Jpw"/>
-        <segue reference="kDS-1f-5zX"/>
+        <segue reference="hEE-3A-muC"/>
+        <segue reference="PVn-92-Nxi"/>
     </inferredMetricsTieBreakers>
 </document>
