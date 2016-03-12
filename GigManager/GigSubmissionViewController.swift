@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import GoogleMaps
 
 class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
 
     var gigSubmissionDictionary: [String:AnyObject] = [:]
 
 
+    @IBOutlet weak var googlePlacesButton: UIButton!
 
     @IBOutlet weak var detailTextView: UITextView!
 
@@ -38,6 +40,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
         loadInTextField.delegate = self
         timeTextField.delegate = self
         setDurationTextField.delegate = self
+        venueTextField.delegate = self
 
     }
 
@@ -58,6 +61,8 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
             venueTextField.hidden = false
             break
         case venueTextField.text != "":
+            googlePlacesButton.hidden = true
+            googlePlacesButton.enabled = false
             venueTextField.hidden = true
             gigSubmissionDictionary["venue"] = venueTextField.text
             venueTextField.text?.removeAll()
@@ -142,6 +147,14 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
             datePicker.addTarget(self, action: "datePickerChangedSetDuration:", forControlEvents: .ValueChanged)
             break;
 
+        case venueTextField:
+
+            let acController = GMSAutocompleteViewController()
+            acController.delegate = self
+            self.presentViewController(acController, animated: true, completion: nil)
+
+            break
+
         default:
             break;
         }
@@ -211,7 +224,7 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
 
         cell.bandName.text = "The Overeasy"
         cell.bandGenre.text = "Funk/Rock"
-//        cell?.bandImage.image = // my image here
+//        cell?.bandImage.image = // band image here
 
 
         return cell
@@ -220,6 +233,40 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
 
         return 3
     }
+
+    @IBAction func googlePlacesButtonPressed(sender: AnyObject) {
+
+
+    }
+
+}
+
+extension GigSubmissionViewController: GMSAutocompleteViewControllerDelegate {
+
+    // Handle the user's selection.
+    func viewController(viewController: GMSAutocompleteViewController, didAutocompleteWithPlace place: GMSPlace) {
+
+        venueTextField.text = place.name
+        gigSubmissionDictionary["placeID"] = place.placeID
+        gigSubmissionDictionary["phoneNumber"] = place.phoneNumber
+        gigSubmissionDictionary["longitude"] = ConversionController.convertLongitudeCoordinateToString(place.coordinate)
+        gigSubmissionDictionary["latitude"] = ConversionController.convertLatitudeCoordinateToString(place.coordinate)
+        self.dismissViewControllerAnimated(true, completion: nil)
+
+    }
+
+    func viewController(viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: NSError) {
+        // TODO: handle the error.
+        print("Error: \(error.description)")
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    // User canceled the operation.
+    func wasCancelled(viewController: GMSAutocompleteViewController) {
+        print("Autocomplete was cancelled.")
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 }
 
 

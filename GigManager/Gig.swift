@@ -17,7 +17,7 @@ class Gig{
     private let compensationKey         = "compensation"
     private let detailsKey              = "details"
     private let longitudeCoordinatesKey = "longitudeCoordinates"
-    private let lattitudeCoordinatesKey = "lattitudeCoordinates"
+    private let latitudeCoordinatesKey = "latitudeCoordinates"
     private let addressKey              = "address"
     private let venueKey                = "venue"
     private let confirmedKey            = "confirmed"
@@ -31,7 +31,7 @@ class Gig{
     var compensation: String?
     var details: String?
     var longitudeCoordinates: String?
-    var lattitudeCoordinates: String?
+    var latitudeCoordinates: String?
     var address: String?
     var venue: String?
     var confirmed: String?
@@ -57,8 +57,8 @@ class Gig{
         if let longitudeCoordinates = longitudeCoordinates {
             json.updateValue(longitudeCoordinates, forKey: longitudeCoordinatesKey)
         }
-        if let lattitudeCoordinates = lattitudeCoordinates {
-            json.updateValue(lattitudeCoordinates, forKey: lattitudeCoordinatesKey)
+        if let latitudeCoordinates = latitudeCoordinates {
+            json.updateValue(latitudeCoordinates, forKey: latitudeCoordinatesKey)
         }
         if let address = address {
             json.updateValue(address, forKey: addressKey)
@@ -95,7 +95,7 @@ class Gig{
         self.compensation = json[compensationKey] as? String
         self.details = json[detailsKey] as? String
         self.longitudeCoordinates = json[longitudeCoordinatesKey] as? String
-        self.lattitudeCoordinates = json[lattitudeCoordinatesKey] as? String
+        self.latitudeCoordinates = json[latitudeCoordinatesKey] as? String
         self.address = json[addressKey] as? String
         self.venue = json[venueKey] as? String
         self.confirmed = json[confirmedKey] as? String
@@ -107,14 +107,14 @@ class Gig{
         self.identifier = identifier
     }
 
-    init(title: String?, placeIdentifier: String?, compensation: String?, details: String?, longitudeCoordinates: String?, lattitudeCoordinates: String?, address: String?, venue: String?, confirmed: String?, date: String?, loadIn: String?, setDuration: String?, bandIdentifier: String?){
+    init(title: String?, placeIdentifier: String?, compensation: String?, details: String?, longitudeCoordinates: String?, latitudeCoordinates: String?, address: String?, venue: String?, confirmed: String?, date: String?, loadIn: String?, setDuration: String?, bandIdentifier: String?){
 
         self.title = title
         self.placeIdentifier = placeIdentifier
         self.compensation = compensation
         self.details = details
         self.longitudeCoordinates = longitudeCoordinates
-        self.lattitudeCoordinates = lattitudeCoordinates
+        self.latitudeCoordinates = latitudeCoordinates
         self.address = address
         self.venue = venue
         self.confirmed = confirmed

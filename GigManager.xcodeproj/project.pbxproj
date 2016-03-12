@@ -36,6 +36,7 @@
 		FF61F7B71C893AC900F29019 /* GigManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61F7B61C893AC900F29019 /* GigManagerTests.swift */; };
 		FF61F7C21C893AC900F29019 /* GigManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61F7C11C893AC900F29019 /* GigManagerUITests.swift */; };
 		FF801FF31C925696009FDF58 /* GigSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */; };
+		FFAAF80C1C93B54200D8EC43 /* ConversionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		FF61F7C11C893AC900F29019 /* GigManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigManagerUITests.swift; sourceTree = "<group>"; };
 		FF61F7C31C893AC900F29019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GigSubmissionViewController.swift; sourceTree = "<group>"; };
+		FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 		FF61F7A01C893AC900F29019 /* GigManager */ = {
 			isa = PBXGroup;
 			children = (
+				FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */,
 				FF61F7AD1C893AC900F29019 /* Info.plist */,
 				FF61F7AA1C893AC900F29019 /* LaunchScreen.storyboard */,
 				FF61F7A51C893AC900F29019 /* Main.storyboard */,
@@ -557,6 +560,7 @@
 				FF02F5B81C8ABDDA00EC39F0 /* Annotation.swift in Sources */,
 				FF02F5B01C8A778F00EC39F0 /* Gig.swift in Sources */,
 				FF02F5D81C8D52ED00EC39F0 /* HomeViewController.swift in Sources */,
+				FFAAF80C1C93B54200D8EC43 /* ConversionController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
