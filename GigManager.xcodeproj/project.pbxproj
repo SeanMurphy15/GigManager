@@ -37,6 +37,8 @@
 		FF61F7C21C893AC900F29019 /* GigManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61F7C11C893AC900F29019 /* GigManagerUITests.swift */; };
 		FF801FF31C925696009FDF58 /* GigSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */; };
 		FFAAF80C1C93B54200D8EC43 /* ConversionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */; };
+		FFD3763D1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3763C1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift */; };
+		FFD3763F1C952BE70083EB53 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3763E1C952BE70083EB53 /* DataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		FF61F7C31C893AC900F29019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GigSubmissionViewController.swift; sourceTree = "<group>"; };
 		FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionController.swift; sourceTree = "<group>"; };
+		FFD3763C1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmGigSubmissionViewController.swift; sourceTree = "<group>"; };
+		FFD3763E1C952BE70083EB53 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,11 +173,12 @@
 		FF02F5B31C8AADDE00EC39F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFD3763E1C952BE70083EB53 /* DataController.swift */,
+				FF02F5B11C8AADD300EC39F0 /* GigController.swift */,
 				FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */,
 				FF02F5BB1C8D0DAB00EC39F0 /* FirebaseController.swift */,
 				FF02F5A91C8A6CE200EC39F0 /* NetworkController.swift */,
 				FF02F5AD1C8A723500EC39F0 /* JSONController.swift */,
-				FF02F5B11C8AADD300EC39F0 /* GigController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */,
+				FFD3763C1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift */,
 				FF02F5E01C8E3B2100EC39F0 /* SetlistTableViewController.swift */,
 				FF02F5DB1C8E03F800EC39F0 /* SideMenuTableViewController.swift */,
 				FF02F5A51C8A660C00EC39F0 /* MapViewController.swift */,
@@ -558,6 +564,8 @@
 				FF02F5E11C8E3B2100EC39F0 /* SetlistTableViewController.swift in Sources */,
 				FF02F5D61C8D501700EC39F0 /* SWRevealViewController.m in Sources */,
 				FF02F5B81C8ABDDA00EC39F0 /* Annotation.swift in Sources */,
+				FFD3763F1C952BE70083EB53 /* DataController.swift in Sources */,
+				FFD3763D1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift in Sources */,
 				FF02F5B01C8A778F00EC39F0 /* Gig.swift in Sources */,
 				FF02F5D81C8D52ED00EC39F0 /* HomeViewController.swift in Sources */,
 				FFAAF80C1C93B54200D8EC43 /* ConversionController.swift in Sources */,

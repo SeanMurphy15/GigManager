@@ -11,11 +11,6 @@ import GoogleMaps
 
 class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UICollectionViewDataSource, UICollectionViewDelegate{
 
-    var gigSubmissionDictionary: [String:AnyObject] = [:]
-
-
-
-
     @IBOutlet weak var detailTextView: UITextView!
 
     @IBOutlet weak var titleTextField: UITextField!
@@ -31,12 +26,13 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
     @IBOutlet weak var loadInTextField: UITextField!
 
     @IBOutlet weak var setDurationTextField: UITextField!
+
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 
         dateTextField.delegate = self
         loadInTextField.delegate = self
@@ -49,66 +45,6 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
-    }
-
-
-    @IBAction func nextButtonPressed(sender: AnyObject) {
-
-        switch (1 > 0) {
-
-        case titleTextField.text != "":
-            titleTextField.hidden = true
-            gigSubmissionDictionary["title"] = titleTextField.text
-            titleTextField.text?.removeAll()
-            venueTextField.hidden = false
-            break
-        case venueTextField.text != "":
-            venueTextField.hidden = true
-            gigSubmissionDictionary["venue"] = venueTextField.text
-            venueTextField.text?.removeAll()
-            compensationTextField.hidden = false
-            break
-        case compensationTextField.text != "":
-            compensationTextField.hidden = true
-            gigSubmissionDictionary["compensation"] = compensationTextField.text
-            compensationTextField.text?.removeAll()
-            dateTextField.hidden = false
-            break
-        case dateTextField.text != "":
-            dateTextField.hidden = true
-            gigSubmissionDictionary["date"] = dateTextField.text
-            dateTextField.text?.removeAll()
-            timeTextField.hidden = false
-            break
-        case timeTextField.text != "":
-            timeTextField.hidden = true
-            gigSubmissionDictionary["time"] = timeTextField.text
-            timeTextField.text?.removeAll()
-            setDurationTextField.hidden = false
-            break
-        case setDurationTextField.text != "":
-            setDurationTextField.hidden = true
-            gigSubmissionDictionary["setDuration"] = setDurationTextField.text
-            setDurationTextField.text?.removeAll()
-            loadInTextField.hidden = false
-            break
-        case loadInTextField.text != "":
-            loadInTextField.hidden = true
-            gigSubmissionDictionary["loadIn"] = loadInTextField.text
-            loadInTextField.text?.removeAll()
-            detailTextView.hidden = false
-            break
-        case detailTextView.text != "":
-            detailTextView.hidden = true
-            gigSubmissionDictionary["detail"] = detailTextView.text
-            detailTextView.text?.removeAll()
-            break
-            
-
-        default:
-            break;
-        }
-        print(gigSubmissionDictionary)
     }
 
 
@@ -214,8 +150,9 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
     func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
 
         titleTextField.hidden = false
+        titleTextField.becomeFirstResponder()
         collectionView.hidden = true
-        print("cell selected")
+
 
     }
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -231,8 +168,76 @@ class GigSubmissionViewController: UIViewController, UITextFieldDelegate, UIColl
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         return 3
+
+        // count of array in the future
     }
 
+    @IBAction func nextButtonPressed(sender: AnyObject) {
+
+        switch (1 > 0) {
+
+        case titleTextField.text != "":
+            titleTextField.hidden = true
+            DataController.saveDataToNSUserDefaults(titleTextField.text, key: "title")
+            titleTextField.text?.removeAll()
+            venueTextField.hidden = false
+            venueTextField.becomeFirstResponder()
+            break
+        case venueTextField.text != "":
+            venueTextField.hidden = true
+            DataController.saveDataToNSUserDefaults(venueTextField.text, key: "venue")
+            venueTextField.text?.removeAll()
+            compensationTextField.hidden = false
+            compensationTextField.becomeFirstResponder()
+            break
+        case compensationTextField.text != "":
+            compensationTextField.hidden = true
+            DataController.saveDataToNSUserDefaults(compensationTextField.text, key: "compensation")
+            compensationTextField.text?.removeAll()
+            dateTextField.hidden = false
+            dateTextField.becomeFirstResponder()
+            break
+        case dateTextField.text != "":
+            dateTextField.hidden = true
+            DataController.saveDataToNSUserDefaults(dateTextField.text, key: "date")
+            dateTextField.text?.removeAll()
+            timeTextField.hidden = false
+            timeTextField.becomeFirstResponder()
+            break
+        case timeTextField.text != "":
+            timeTextField.hidden = true
+            DataController.saveDataToNSUserDefaults(timeTextField.text, key: "time")
+            timeTextField.text?.removeAll()
+            setDurationTextField.hidden = false
+            setDurationTextField.becomeFirstResponder()
+            break
+        case setDurationTextField.text != "":
+            setDurationTextField.hidden = true
+            DataController.saveDataToNSUserDefaults(setDurationTextField.text, key: "setDuration")
+            setDurationTextField.text?.removeAll()
+            loadInTextField.hidden = false
+            loadInTextField.becomeFirstResponder()
+            break
+        case loadInTextField.text != "":
+            loadInTextField.hidden = true
+            DataController.saveDataToNSUserDefaults(loadInTextField.text, key: "loadIn")
+            loadInTextField.text?.removeAll()
+            detailTextView.hidden = false
+            detailTextView.becomeFirstResponder()
+            break
+        case detailTextView.text != "":
+            detailTextView.hidden = true
+            DataController.saveDataToNSUserDefaults(detailTextView.text, key: "detail")
+            detailTextView.text?.removeAll()
+            performSegueWithIdentifier("toConfirmGigSubmissionViewController", sender: nil)
+
+            break
+
+
+        default:
+            break;
+        }
+    }
 
 }
 
@@ -242,12 +247,11 @@ extension GigSubmissionViewController: GMSAutocompleteViewControllerDelegate {
     func viewController(viewController: GMSAutocompleteViewController, didAutocompleteWithPlace place: GMSPlace) {
 
         venueTextField.text = place.name
-        gigSubmissionDictionary["placeID"] = place.placeID
-        gigSubmissionDictionary["phoneNumber"] = place.phoneNumber
-        gigSubmissionDictionary["address"] = place.formattedAddress
-        gigSubmissionDictionary["website"] = ConversionController.convertNSURLToString(place.website!)
-        gigSubmissionDictionary["longitude"] = ConversionController.convertLongitudeCoordinateToString(place.coordinate)
-        gigSubmissionDictionary["latitude"] = ConversionController.convertLatitudeCoordinateToString(place.coordinate)
+        DataController.saveDataToNSUserDefaults(place.placeID, key: "placeID") 
+        DataController.saveDataToNSUserDefaults(place.phoneNumber, key: "phoneNumber")
+        DataController.saveDataToNSUserDefaults(place.formattedAddress, key: "address")
+        DataController.saveDataToNSUserDefaults(ConversionController.convertLongitudeCoordinateToString(place.coordinate), key: "longitude")
+        DataController.saveDataToNSUserDefaults(ConversionController.convertLatitudeCoordinateToString(place.coordinate), key: "latitude")
         self.dismissViewControllerAnimated(true, completion: nil)
 
     }

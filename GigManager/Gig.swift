@@ -10,7 +10,7 @@ import Foundation
 import MapKit
 
 
-class Gig{
+class Gig: Equatable, FirebaseType{
 
     private let titleKey                = "title"
     private let placeIdentifierKey      = "placeIdentifier"
@@ -124,7 +124,9 @@ class Gig{
         self.bandIdentifier = bandIdentifier
     }
     
-    
-    
-    
+}
+
+func == (lhs: Gig, rhs: Gig) -> Bool {
+
+    return (lhs.title == rhs.title) && (lhs.identifier == rhs.identifier)
 }

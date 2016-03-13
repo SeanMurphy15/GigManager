@@ -35,10 +35,12 @@ class ConversionController{
         return nil
     }
 
-    static func convertNSURLToString(url: NSURL) -> String?{
+    static func convertNSURLToString(url: NSURL?) -> String?{
 
-        if let urlString : String = String(format:"%f", url) {
-            
+        if url != nil {
+
+            let urlString : String = String(format:"%f", url!)
+
             return urlString
         }
         
