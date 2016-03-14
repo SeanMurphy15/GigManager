@@ -56,5 +56,19 @@ class BandController {
 
         })
     }
+
+    static func addMemberToBand(bandIdentifier: String){
+
+        let ref = Firebase(url: "https://gigmanager.firebaseio.com/bands/\(bandIdentifier)/members")
+
+        if let memberRef = ref.childByAutoId(){
+
+            memberRef.setValue("sean murphy")
+
+        } else {
+
+            print("nope")
+        }
+    }
     
 }

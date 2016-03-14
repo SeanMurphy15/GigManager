@@ -13,8 +13,6 @@ import Firebase
 class GigController{
 
 
-
-
     static func createGig(title: String?, placeIdentifier: String?, compensation: String?, detail: String?, longitude: String?, latitude: String?, address: String?, venue: String?, confirmed: String?, date: String?, loadIn: String?, setDuration: String?, bandIdentifier: String?, completion: (success: Bool, error: NSError?, gig: Gig?)->Void){
 
         let error = NSError?()
