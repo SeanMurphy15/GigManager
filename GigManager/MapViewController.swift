@@ -36,40 +36,10 @@ class MapViewController: UIViewController, MKMapViewDelegate{
 
     @IBAction func addPlaceButtonPressed(sender: AnyObject) {
 
-        let acController = GMSAutocompleteViewController()
-        acController.delegate = self
-        self.presentViewController(acController, animated: true, completion: nil)
+        
 
     }
 
 
 }
 
-extension MapViewController: GMSAutocompleteViewControllerDelegate {
-
-    // Handle the user's selection.
-    func viewController(viewController: GMSAutocompleteViewController, didAutocompleteWithPlace place: GMSPlace) {
-
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = place.coordinate
-        annotation.title = place.name
-        annotation.subtitle = place.placeID
-        mapView.addAnnotation(annotation)
-
-        viewController.dismissViewControllerAnimated(true, completion: nil)
-
-    }
-
-    func viewController(viewController: GMSAutocompleteViewController, didFailAutocompleteWithError error: NSError) {
-        // TODO: handle the error.
-        print("Error: \(error.description)")
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-
-    // User canceled the operation.
-    func wasCancelled(viewController: GMSAutocompleteViewController) {
-        print("Autocomplete was cancelled.")
-        self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-}

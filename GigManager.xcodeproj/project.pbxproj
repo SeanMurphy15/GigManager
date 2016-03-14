@@ -14,7 +14,7 @@
 		FF02F5AA1C8A6CE200EC39F0 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5A91C8A6CE200EC39F0 /* NetworkController.swift */; };
 		FF02F5AE1C8A723500EC39F0 /* JSONController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5AD1C8A723500EC39F0 /* JSONController.swift */; };
 		FF02F5B01C8A778F00EC39F0 /* Gig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5AF1C8A778F00EC39F0 /* Gig.swift */; };
-		FF02F5B21C8AADD300EC39F0 /* PlaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5B11C8AADD300EC39F0 /* PlaceController.swift */; };
+		FF02F5B21C8AADD300EC39F0 /* GigController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5B11C8AADD300EC39F0 /* GigController.swift */; };
 		FF02F5B81C8ABDDA00EC39F0 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5B71C8ABDDA00EC39F0 /* Annotation.swift */; };
 		FF02F5BC1C8D0DAB00EC39F0 /* FirebaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5BB1C8D0DAB00EC39F0 /* FirebaseController.swift */; };
 		FF02F5BE1C8D111300EC39F0 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF02F5BD1C8D111300EC39F0 /* Firebase.framework */; };
@@ -23,19 +23,25 @@
 		FF02F5C41C8D119000EC39F0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF02F5C31C8D119000EC39F0 /* CFNetwork.framework */; };
 		FF02F5C61C8D11A800EC39F0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF02F5C51C8D11A800EC39F0 /* Security.framework */; };
 		FF02F5C81C8D11B700EC39F0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF02F5C71C8D11B700EC39F0 /* SystemConfiguration.framework */; };
-		FF02F5CE1C8D18F700EC39F0 /* GigDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5CD1C8D18F700EC39F0 /* GigDetailViewController.swift */; };
-		FF02F5D21C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D11C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift */; };
+		FF02F5D21C8D329A00EC39F0 /* BandImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D11C8D329A00EC39F0 /* BandImageCollectionViewCell.swift */; };
 		FF02F5D61C8D501700EC39F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D51C8D501700EC39F0 /* SWRevealViewController.m */; };
 		FF02F5D81C8D52ED00EC39F0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5D71C8D52ED00EC39F0 /* HomeViewController.swift */; };
 		FF02F5DC1C8E03F800EC39F0 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5DB1C8E03F800EC39F0 /* SideMenuTableViewController.swift */; };
 		FF02F5E11C8E3B2100EC39F0 /* SetlistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5E01C8E3B2100EC39F0 /* SetlistTableViewController.swift */; };
-		FF02F5E31C8E430900EC39F0 /* Member.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5E21C8E430900EC39F0 /* Member.swift */; };
+		FF02F5E31C8E430900EC39F0 /* Band.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF02F5E21C8E430900EC39F0 /* Band.swift */; };
 		FF61F7A21C893AC900F29019 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61F7A11C893AC900F29019 /* AppDelegate.swift */; };
 		FF61F7A71C893AC900F29019 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF61F7A51C893AC900F29019 /* Main.storyboard */; };
 		FF61F7A91C893AC900F29019 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF61F7A81C893AC900F29019 /* Assets.xcassets */; };
 		FF61F7AC1C893AC900F29019 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF61F7AA1C893AC900F29019 /* LaunchScreen.storyboard */; };
 		FF61F7B71C893AC900F29019 /* GigManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61F7B61C893AC900F29019 /* GigManagerTests.swift */; };
 		FF61F7C21C893AC900F29019 /* GigManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF61F7C11C893AC900F29019 /* GigManagerUITests.swift */; };
+		FF801FF31C925696009FDF58 /* GigSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */; };
+		FFAAF80C1C93B54200D8EC43 /* ConversionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */; };
+		FFD3763D1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3763C1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift */; };
+		FFD3763F1C952BE70083EB53 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD3763E1C952BE70083EB53 /* DataController.swift */; };
+		FFD376431C96427E0083EB53 /* AddBandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD376421C96427E0083EB53 /* AddBandViewController.swift */; };
+		FFD376451C96460F0083EB53 /* MemberCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD376441C96460F0083EB53 /* MemberCollectionViewCell.swift */; };
+		FFD376491C9654610083EB53 /* BandController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD376481C9654610083EB53 /* BandController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +76,7 @@
 		FF02F5A91C8A6CE200EC39F0 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		FF02F5AD1C8A723500EC39F0 /* JSONController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONController.swift; sourceTree = "<group>"; };
 		FF02F5AF1C8A778F00EC39F0 /* Gig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gig.swift; sourceTree = "<group>"; };
-		FF02F5B11C8AADD300EC39F0 /* PlaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceController.swift; sourceTree = "<group>"; };
+		FF02F5B11C8AADD300EC39F0 /* GigController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GigController.swift; sourceTree = "<group>"; };
 		FF02F5B71C8ABDDA00EC39F0 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		FF02F5BB1C8D0DAB00EC39F0 /* FirebaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseController.swift; sourceTree = "<group>"; };
 		FF02F5BD1C8D111300EC39F0 /* Firebase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Firebase.framework; sourceTree = "<group>"; };
@@ -79,14 +85,13 @@
 		FF02F5C31C8D119000EC39F0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		FF02F5C51C8D11A800EC39F0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FF02F5C71C8D11B700EC39F0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		FF02F5CD1C8D18F700EC39F0 /* GigDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GigDetailViewController.swift; path = ../GigDetailViewController.swift; sourceTree = "<group>"; };
-		FF02F5D11C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MemberImageCollectionViewCell.swift; path = ../MemberImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF02F5D11C8D329A00EC39F0 /* BandImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BandImageCollectionViewCell.swift; path = ../BandImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		FF02F5D41C8D501700EC39F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		FF02F5D51C8D501700EC39F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FF02F5D71C8D52ED00EC39F0 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		FF02F5DB1C8E03F800EC39F0 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideMenuTableViewController.swift; path = ../SideMenuTableViewController.swift; sourceTree = "<group>"; };
 		FF02F5E01C8E3B2100EC39F0 /* SetlistTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetlistTableViewController.swift; sourceTree = "<group>"; };
-		FF02F5E21C8E430900EC39F0 /* Member.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Member.swift; sourceTree = "<group>"; };
+		FF02F5E21C8E430900EC39F0 /* Band.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Band.swift; sourceTree = "<group>"; };
 		FF61F79E1C893AC900F29019 /* GigManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GigManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF61F7A11C893AC900F29019 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FF61F7A61C893AC900F29019 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -99,6 +104,13 @@
 		FF61F7BD1C893AC900F29019 /* GigManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GigManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF61F7C11C893AC900F29019 /* GigManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GigManagerUITests.swift; sourceTree = "<group>"; };
 		FF61F7C31C893AC900F29019 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GigSubmissionViewController.swift; sourceTree = "<group>"; };
+		FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionController.swift; sourceTree = "<group>"; };
+		FFD3763C1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmGigSubmissionViewController.swift; sourceTree = "<group>"; };
+		FFD3763E1C952BE70083EB53 /* DataController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		FFD376421C96427E0083EB53 /* AddBandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBandViewController.swift; sourceTree = "<group>"; };
+		FFD376441C96460F0083EB53 /* MemberCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemberCollectionViewCell.swift; sourceTree = "<group>"; };
+		FFD376481C9654610083EB53 /* BandController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BandController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,10 +179,13 @@
 		FF02F5B31C8AADDE00EC39F0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFD376481C9654610083EB53 /* BandController.swift */,
+				FF02F5B11C8AADD300EC39F0 /* GigController.swift */,
+				FFD3763E1C952BE70083EB53 /* DataController.swift */,
+				FFAAF80B1C93B54200D8EC43 /* ConversionController.swift */,
 				FF02F5BB1C8D0DAB00EC39F0 /* FirebaseController.swift */,
 				FF02F5A91C8A6CE200EC39F0 /* NetworkController.swift */,
 				FF02F5AD1C8A723500EC39F0 /* JSONController.swift */,
-				FF02F5B11C8AADD300EC39F0 /* PlaceController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -179,7 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				FF02F5AF1C8A778F00EC39F0 /* Gig.swift */,
-				FF02F5E21C8E430900EC39F0 /* Member.swift */,
+				FF02F5E21C8E430900EC39F0 /* Band.swift */,
 				FF02F5B71C8ABDDA00EC39F0 /* Annotation.swift */,
 			);
 			name = Models;
@@ -196,9 +211,11 @@
 		FF02F5B61C8AAE5600EC39F0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FFD376421C96427E0083EB53 /* AddBandViewController.swift */,
+				FF801FF21C925696009FDF58 /* GigSubmissionViewController.swift */,
+				FFD3763C1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift */,
 				FF02F5E01C8E3B2100EC39F0 /* SetlistTableViewController.swift */,
 				FF02F5DB1C8E03F800EC39F0 /* SideMenuTableViewController.swift */,
-				FF02F5CD1C8D18F700EC39F0 /* GigDetailViewController.swift */,
 				FF02F5A51C8A660C00EC39F0 /* MapViewController.swift */,
 			);
 			name = ViewControllers;
@@ -207,7 +224,8 @@
 		FF02F5D31C8D32BE00EC39F0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				FF02F5D11C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift */,
+				FF02F5D11C8D329A00EC39F0 /* BandImageCollectionViewCell.swift */,
+				FFD376441C96460F0083EB53 /* MemberCollectionViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -546,17 +564,23 @@
 				FF02F5DC1C8E03F800EC39F0 /* SideMenuTableViewController.swift in Sources */,
 				FF61F7A21C893AC900F29019 /* AppDelegate.swift in Sources */,
 				FF02F5AE1C8A723500EC39F0 /* JSONController.swift in Sources */,
-				FF02F5E31C8E430900EC39F0 /* Member.swift in Sources */,
+				FF801FF31C925696009FDF58 /* GigSubmissionViewController.swift in Sources */,
+				FF02F5E31C8E430900EC39F0 /* Band.swift in Sources */,
 				FF02F5A61C8A660C00EC39F0 /* MapViewController.swift in Sources */,
-				FF02F5D21C8D329A00EC39F0 /* MemberImageCollectionViewCell.swift in Sources */,
+				FF02F5D21C8D329A00EC39F0 /* BandImageCollectionViewCell.swift in Sources */,
 				FF02F5AA1C8A6CE200EC39F0 /* NetworkController.swift in Sources */,
-				FF02F5B21C8AADD300EC39F0 /* PlaceController.swift in Sources */,
+				FF02F5B21C8AADD300EC39F0 /* GigController.swift in Sources */,
 				FF02F5E11C8E3B2100EC39F0 /* SetlistTableViewController.swift in Sources */,
-				FF02F5CE1C8D18F700EC39F0 /* GigDetailViewController.swift in Sources */,
 				FF02F5D61C8D501700EC39F0 /* SWRevealViewController.m in Sources */,
 				FF02F5B81C8ABDDA00EC39F0 /* Annotation.swift in Sources */,
+				FFD3763F1C952BE70083EB53 /* DataController.swift in Sources */,
+				FFD376491C9654610083EB53 /* BandController.swift in Sources */,
+				FFD376451C96460F0083EB53 /* MemberCollectionViewCell.swift in Sources */,
+				FFD3763D1C950D940083EB53 /* ConfirmGigSubmissionViewController.swift in Sources */,
 				FF02F5B01C8A778F00EC39F0 /* Gig.swift in Sources */,
 				FF02F5D81C8D52ED00EC39F0 /* HomeViewController.swift in Sources */,
+				FFAAF80C1C93B54200D8EC43 /* ConversionController.swift in Sources */,
+				FFD376431C96427E0083EB53 /* AddBandViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
