@@ -17,6 +17,18 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+
+        BandController.fetchGigsForBand("-KCnJ37byiaPTZJZ2-OX") { (success, error, gigs) -> Void in
+
+            if success {
+
+                print(gigs)
+
+            } else {
+
+                print(error?.localizedDescription)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -67,11 +67,13 @@ class ConfirmGigSubmissionViewController: UITableViewController {
 
               gig?.save()
 
+                DataController.deleteAllDataFromNSUserDefaults()
+
                 print("gig saved successfully")
 
             } else {
 
-
+                print("unable to save gig")
             }
         }
         

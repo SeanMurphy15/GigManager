@@ -15,7 +15,7 @@ class SideMenuTableViewController: UITableViewController {
 
     override func viewDidLoad() {
 
-        menuItemsArray = ["Home","Gig Map","Band Schedule","Setlists","Pending Gigs","Add Gig"]
+        menuItemsArray = ["Home","Gig Map","Band Schedule","Setlists","Pending Gigs","Add Gig", "Add Band"]
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

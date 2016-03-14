@@ -12,14 +12,14 @@ import Firebase
 
 class GigController{
 
-var ref = Firebase(url: "https://gigmanager.firebaseio.com/")
+
 
 
     static func createGig(title: String?, placeIdentifier: String?, compensation: String?, detail: String?, longitude: String?, latitude: String?, address: String?, venue: String?, confirmed: String?, date: String?, loadIn: String?, setDuration: String?, bandIdentifier: String?, completion: (success: Bool, error: NSError?, gig: Gig?)->Void){
 
         let error = NSError?()
 
-        if title == nil || date == nil {
+        if (error != nil) {
 
             completion(success: false, error: error, gig: nil)
 
@@ -31,6 +31,5 @@ var ref = Firebase(url: "https://gigmanager.firebaseio.com/")
         }
 
     }
-
 
 }
